@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --fontFamily: 'Red Hat Display', sans-serif;
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+  --shadowColor: hsla(223, 47%, 23%, 0.2);
+  --fontSize: 16px;
+  --textColor: hsl(0, 0%, 36%);
+  --headingColor: hsl(0, 0%, 21%);
+  --activeColor: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: var(--fontFamily);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--paleBlue);
+  background-image: url('../images/pattern-background-desktop.svg');
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--fontSize);
+  color: var(--textColor);
+  font-weight: 500;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 15px 0;
+  font-weight: 900;
+  color: var(--headingColor);
+}
+h1 {
+  font-size: 21px;
+}
+h3 {
+  font-size: 18px;
+}
+a, a:visited, a:active {
+  text-decoration: none;
+  outline: none;
+}
+a, button {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+p {
+  font-size: var(--fontSize);
+}
+img {
+  max-width: 100%;
+}
+.card {
+  max-width: 340px;
+  border-radius: 15px;
+  background-color: #FFF;
+  overflow: hidden;
+  box-shadow: 0 0 15px var(--shadowColor);
+}
+.card-content {
+  padding: 0 15px 15px 15px;
+}
+.card-plan {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--veryPaleBlue);
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  margin-bottom: 20px;
+}
+.card-plan h3 {
+  margin: 0 0 10px 0;
+}
+.card-plan p {
+  margin: 0;
+}
+.plan-change {
+  flex-grow: 1;
+  text-align: right;
+  color: var(--brightBlue);
+}
+.plan-change:hover {
+  color: var(--activeColor);
+}
+button {
+  border: none;
+  display: inline-block;
+  width: 100%;
+  background-color: var(--brightBlue);
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 0;
+}
+button:hover {
+  background-color: var(--activeColor);
+}
+.payment {
+  margin-bottom: 20px;
+}
+.cancel a {
+  color: var(--textColor);
+}
+.cancel a:hover {
+  color: var(--headingColor);
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 0 15px 0 15px;
+    background-image: url('../images/pattern-background-mobile.svg');
+  }
+}
